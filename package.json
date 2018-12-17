@@ -1,0 +1,27 @@
+{
+  "name": "the-first-steps",
+  "version": "1.0.0",
+  "description": "> node - v\r * Версия должна быть вышe v6.9.2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stee1y/the-first-steps.git"
+  },
+  "author": "Eremeev Ivan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stee1y/the-first-steps/issues"
+  },
+  "homepage": "https://github.com/stee1y/the-first-steps#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp-rigger": "^0.5.8",
+    "gulp-rimraf": "^0.2.2",
+    "gulp-sass": "^4.0.2",
+    "gulp.spritesmith": "^6.9.0",
+    "gulp4": "^4.0.2"
+  }
+}
