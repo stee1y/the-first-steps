@@ -18,10 +18,16 @@
   "homepage": "https://github.com/stee1y/the-first-steps#readme",
   "devDependencies": {
     "browser-sync": "^2.26.3",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-imagemin": "^5.0.3",
     "gulp-rigger": "^0.5.8",
     "gulp-rimraf": "^0.2.2",
     "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp.spritesmith": "^6.9.0",
     "gulp4": "^4.0.2"
+  },
+  "dependencies": {
+    "node-normalize-scss": "^8.0.0"
   }
 }

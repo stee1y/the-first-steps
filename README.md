@@ -15,3 +15,19 @@
 
 > git clone https://github.com/stee1y/the-first-steps.git
 * Склонировать
+
+> npm i
+* Запуск проекта
+
+## Структура папок
+
+    - src
+        - fonts        => файлы шрифтов
+        - image        => картинки проекта
+            - icons    => иконки формата .png
+        - js           => js файлы
+        - styles       => главный файл стилей main.scss
+            - global   => глобальные файлы стилей формата .scss
+            - section  => файлы стилей секций(блоков) формата .scss
+        - template     => главный файл index.html
+            - section  => файлы секций(блоков) формата .html
