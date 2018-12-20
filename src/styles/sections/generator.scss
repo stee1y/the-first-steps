@@ -1,0 +1,61 @@
+.block {
+  display: block;
+  position: absolute;
+  width: 60%;
+  padding: 10px 40px;
+  top: 50px;
+  left: 50%;
+  background-color: #000;
+  color: #fff;
+  border-radius: 11px;
+  transform: translate(-50%, 0);
+
+  h1{
+    text-align: center;
+  }
+
+  .btn {
+    display: block;
+    padding: 15px 50px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 40px;
+    background-color: #8400E9;
+    color: #ffffff;
+    outline: none;
+
+    &:hover{
+      background-color: lighten(#8400E9, 13%);
+    }
+  }
+}
+
+.generator {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+
+  &-item{
+    padding: 4px;
+
+    #line-length{
+      width: 100%;
+    }
+    &__input{
+
+    }
+  }
+}
+
+#out {
+  display: block;
+  position: absolute;
+  bottom: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  p{
+    display: flex;
+    width: auto;
+  }
+}

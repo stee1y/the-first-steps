@@ -1,0 +1,48 @@
+<div class="block">
+    <h1>Генератор паролей</h1>
+    <ul class="generator">
+        <li class="generator-item">
+            <label class="generator-item__label" for="line-length">Длинна строки
+                (<span id="length">8</span>) <br>
+                <input id="line-length" type="range" value="8" min="6" max="50" class="generator-item__input">
+            <!-- /.generator-item__input -->
+            </label>
+        </li>
+        <!-- /.generator-item -->
+        <li class="generator-item">
+            <label for="numbers">
+                <input id="numbers" checked type="checkbox" class="generator-item__input"><!-- /.generator-item__input -->
+                Цифры
+            </label>
+        </li>
+        <!-- /.generator-item -->
+        <li class="generator-item">
+            <label for="small-letters">
+                <input id="small-letters" checked type="checkbox" class="generator-item__input"><!-- /.generator-item__input -->
+                Строчные буквы
+            </label>
+        </li>
+        <!-- /.generator-item -->
+        <li class="generator-item">
+            <label for="big-letters">
+                <input id="big-letters" type="checkbox" class="generator-item__input"><!-- /.generator-item__input -->
+                Прописные буквы
+            </label>
+        </li>
+        <!-- /.generator-item -->
+        <li class="generator-item">
+            <label for="special-characters">
+                <input id="special-characters" type="checkbox" class="generator-item__input"><!-- /.generator-item__input -->
+                Спецсимволы
+            </label>
+        </li>
+        <!-- /.generator-item -->
+    </ul>
+    <!-- /.generator -->
+    <button id="generator" type="button" class="btn">Generator</button>
+</div>
+<!-- /.block -->
+<div id="out">
+
+</div>
+<!-- /.out -->

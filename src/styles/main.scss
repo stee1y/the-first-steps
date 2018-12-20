@@ -1,9 +1,10 @@
 @import "../../node_modules/node-normalize-scss/normalize";
 
-@import "global/sprite.scss";
+//@import "global/sprite.scss";
+@import "global/common";
 
 
-
+@import "sections/generator";
 
 
 

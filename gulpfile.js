@@ -76,7 +76,15 @@ gulp.task('copy:images', function () {
 
                                 // Вызов паралельного копирования шрифтов и картинок
 
-gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images'));
+gulp.task('copy:js', function () {
+    return gulp.src('src/js/**/*.*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('build/js'));
+});
+
+
+
+gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images', 'copy:js'));
 
                                 // Вотчер для компиляции и дальнейшей перезагрузки сервера
 
