@@ -37,7 +37,7 @@ function generatePass() {
 
 
                                 // цикл для создания 6 случайных паролей на странице
-    for (var q = 0; q < 6; q++){
+    for (var q = 0; q < 3; q++){
 
                                 // получение значения выбранного количества элементов и переведение этого значения в число командой parseInt()
     var lineLength = parseInt(document.getElementById('line-length').value);

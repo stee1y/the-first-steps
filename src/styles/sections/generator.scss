@@ -1,17 +1,16 @@
 .block {
   display: block;
-  position: absolute;
+  margin: 50px auto;
   width: 60%;
   padding: 10px 40px;
-  top: 50px;
-  left: 50%;
   background-color: #000;
   color: #fff;
   border-radius: 11px;
-  transform: translate(-50%, 0);
+
 
   h1{
     text-align: center;
+    text-shadow: 2px 3px 5px #8400E9;
   }
 
   .btn {
@@ -39,6 +38,7 @@
     padding: 4px;
 
     #line-length{
+      margin-top: 10px;
       width: 100%;
     }
     &__input{
@@ -49,13 +49,21 @@
 
 #out {
   display: block;
-  position: absolute;
-  bottom: 180px;
-  left: 50%;
-  transform: translateX(-50%);
+  max-width: 290px;
+  min-width: 290px;
+  margin: 20px auto 30px;
+
 
   p{
-    display: flex;
-    width: auto;
+    display: block;
+    text-align: center;
+    padding-bottom: 3px;
+    word-break: break-all;
+    border-bottom: 1px solid #fff;
+
+    &::selection {
+      background-color: yellow;
+      color: #000;
+    }
   }
 }
