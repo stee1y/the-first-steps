@@ -1,6 +1,18 @@
 @import "../../node_modules/node-normalize-scss/normalize";
 
+@import "global/fonts";
+@import "global/vars";
+@import "global/common";
+@import "global/base";
+@import "global/mixins";
+
 @import "global/sprite.scss";
+
+
+
+
+@import "sections/header";
+@import "sections/footer";
 
 
 

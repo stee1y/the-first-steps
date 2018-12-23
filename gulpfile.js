@@ -7,6 +7,8 @@ const rimraf = require('rimraf');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
+const concat = require('gulp-concat');
+
 
                                 // Сервер
 
@@ -32,11 +34,13 @@ gulp.task('html:build', function () {
 
 gulp.task('sass:build', function () {
     return gulp.src('src/styles/main.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('build/css'));
 });
 
@@ -78,17 +82,31 @@ gulp.task('copy:images', function () {
 
 gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images'));
 
+                                // js
+
+gulp.task('javascript', function() {
+    return gulp.src([
+        'src/js/main.js'
+        ])
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(concat('all.js'))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('build/js'));
+});
+
+
                                 // Вотчер для компиляции и дальнейшей перезагрузки сервера
 
 gulp.task('watch', function () {
     gulp.watch('src/template/**/*.html', gulp.series('html:build'));
     gulp.watch('src/styles/**/*.scss', gulp.series('sass:build'));
+    gulp.watch('src/js/**/*.js', gulp.series('javascript'));
 });
 
                                 // Запуск проекта
 
 gulp.task('default', gulp.series(
     'del',
-    gulp.parallel('html:build', 'sass:build', 'sprite', 'copy'),
+    gulp.parallel('html:build', 'sass:build', 'javascript', 'sprite', 'copy'),
     gulp.parallel('watch', 'server')
 ));

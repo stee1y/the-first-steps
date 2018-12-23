@@ -13,7 +13,7 @@
 > npm i gulp4 -g
 * Установите gulp4 глобально
 
-> git clone https://github.com/stee1y/the-first-steps.git
+> git clone 
 * Склонировать
 
 > npm i
