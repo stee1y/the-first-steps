@@ -13,6 +13,11 @@ document.getElementById('line-length').oninput = function () {
     document.getElementById('length').innerHTML = this.value;
 };
 
+                                // количество паролей
+document.getElementById('number-password').oninput = function () {
+    document.getElementById('number-pass').innerHTML = this.value;
+};
+
                                 // отлавливание нажатия генерации
 document.getElementById('generator').onclick = generatePass;
 
@@ -35,9 +40,11 @@ function generatePass() {
                                 // очищение строк
     document.getElementById('out').innerHTML = '';
 
+                                // получение значения выбранного количества паролей и переведение этого значения в число командой parseInt()
+    var numberPassword = parseInt(document.getElementById('number-password').value);
 
-                                // цикл для создания 6 случайных паролей на странице
-    for (var q = 0; q < 3; q++){
+                                // цикл для создания случайных паролей на странице
+    for (var q = 0; q < numberPassword; q++){
 
                                 // получение значения выбранного количества элементов и переведение этого значения в число командой parseInt()
     var lineLength = parseInt(document.getElementById('line-length').value);
@@ -51,6 +58,16 @@ function generatePass() {
 
                                 // выведение полученого пароля
     }document.getElementById('out').innerHTML += '<p>' + pass + '</p>';
+
+                                // после окончания генерации поднять экран к паролям (для телефонов)
+        function up() {
+            if (window.pageYOffset > 0) {
+                window.scrollBy(0, -1);
+                setTimeout(up, 3);
+            };
+        };
+
+        up();
     };
 };
 
