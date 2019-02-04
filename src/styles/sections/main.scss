@@ -1,0 +1,113 @@
+.main {
+  display: block;
+  width: 100vw;
+  height: 1000px;
+  color: #001450;
+
+  &__title {
+    position: relative;
+    margin-top: 0;
+    padding-top: 370px;
+    margin-left: 3vw;
+    font-size: 110px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 3px #FFF;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 300px;
+      height: 200px;
+      left: 160px;
+      bottom: -40px;
+      border: 2px solid #000;
+      transform: skewX(-40deg);
+      background-color: rgba(30,58,101, 0.8);
+      z-index: -1;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 750px;
+      height: 150px;
+      left: -200px;
+      bottom: -15px;
+      border: 2px solid #000;
+      transform: skewX(-40deg);
+      background-color: #4D90FE;
+      z-index: -1;
+    }
+  }
+
+  &__sub-title {
+    margin-top: 0;
+    display: inline-block;
+    margin-left: 5vw;
+    font-size: 50px;
+    line-height: 70px;
+    text-transform: uppercase;
+    text-shadow: 2px 3px 3px #000B2C;
+
+    &--color {
+      margin-left: 70px;
+      padding: 5px 10px;
+      color: #e1e1e1;
+      background-color: #4D90FE;
+      border: 1px solid #000B2C;
+      text-shadow: 2px 3px 3px #000B2C;
+    }
+  }
+
+  @media screen and (max-width: 1140px) {
+      &__title {
+        padding-top: 270px;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+
+      height: 570px;
+
+      &__title {
+        padding-top: 65px;
+        font-size: 55px;
+
+        &::before {
+          width: 150px;
+          height: 100px;
+          left: 60px;
+          bottom: -27px;
+        }
+
+        &::after {
+          width: 520px;
+          height: 75px;
+          bottom: -10px;
+        }
+      }
+
+      &__sub-title {
+        margin-top: 25px;
+        font-size: 30px;
+        line-height: 47px;
+
+        &--color {
+          margin-left: 40px;
+        }
+      }
+  }
+
+  @media screen and (max-width: 540px) {
+
+    &__sub-title {
+      margin-top: 25px;
+      font-size: 25px;
+      line-height: 47px;
+
+      &--color {
+        margin-left: 40px;
+      }
+    }
+  }
+}

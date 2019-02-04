@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-family: Tahoma, sans-serif;
 }
 
 *,*:before, *:after {
@@ -9,4 +10,8 @@ html {
 ul,
 ol {
   list-style-type: none;
+}
+
+.visible-hidden {
+  opacity: 0;
 }
